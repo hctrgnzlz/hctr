@@ -1,3 +1,16 @@
 body {
-  background-color: tomato;
+  background-image: url(./assets/MOnXZPm.png);
+}
+
+h1 {
+  color: #fafafa;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+  font-size: 25px;
+  font-family: "VT323", monospace;
+}
+
+span {
+  font-size: 15px;
 }
