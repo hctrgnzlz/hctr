@@ -45,7 +45,7 @@ const lastName = [
   "Gambino",
   "Capo",
   "Ninja",
-  "Wonderer",
+  "Wanderer",
   "Man",
   "Assasin",
   "Butcher",
