@@ -1,0 +1,461 @@
+@import "setup";
+@import "variablemix";
+@import "glitch";
+
+body {
+  background-image: url($bg);
+  background-color: $bg-color;
+  background-repeat: repeat;
+  font-family: $font;
+  text-transform: uppercase;
+  margin: 0 auto;
+  position: relative;
+  color: $font-color;
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+//NAVIGATION STYLES//
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    width: 40px;
+    opacity: 0.3;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+  }
+
+  &__item {
+    list-style: none;
+    margin-right: 40px;
+
+    & span {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include link;
+  }
+
+  &__link::after {
+    @include linkafter;
+  }
+
+  &__link:hover::after {
+    @include linkhover;
+  }
+
+  &__toggle span,
+  &__toggle #toggle {
+    display: none;
+  }
+
+  &__toggle .fas {
+    font-size: 30px;
+    color: $highlight-color;
+  }
+}
+
+//ASIDE STYLES//
+.aside {
+  font-size: 14px;
+  color: $subheading-color;
+
+  &__date {
+    position: fixed;
+    left: -4.2em;
+    top: 50%;
+    margin-top: -1.5em;
+    transform: rotate(-90deg);
+  }
+
+  &__name {
+    position: fixed;
+    right: -5.5rem;
+    top: 50%;
+    transform: rotate(90deg);
+  }
+}
+
+//QUICK INFO STYLES//
+.eye {
+  width: 40px;
+  align-self: center;
+  margin: 0 0 10px 10px;
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out;
+}
+.eye:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.eye.active {
+  display: none;
+}
+
+.secret {
+  z-index: 99;
+  transition: none;
+  margin: 0;
+  padding: 0;
+  border: $nyxl-red solid 2px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: 0;
+  display: none;
+  color: #ffffff;
+
+  &__title {
+    border: 0;
+    margin: 0;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    width: 55%;
+    height: 55%;
+    z-index: -1;
+    background: $nyxl-red;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__media {
+    margin-top: 30px;
+
+    & i {
+      font-size: 30px;
+      color: $nyxl-red;
+      transition: all 0.1s ease-in-out;
+      margin-right: 5px;
+    }
+
+    & i:hover {
+      transform: scale(1.2);
+    }
+
+    & a {
+      text-decoration: none;
+    }
+  }
+}
+
+.secret.active {
+  opacity: 1;
+  min-height: 40vh;
+  min-width: 60vh;
+  background-image: url($contact);
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: 90% 10%;
+  background-color: rgba(20, 26, 57, 0.94);
+  position: absolute;
+  padding: 20px;
+  top: -90px;
+  left: -50px;
+  transition: 1s;
+}
+
+.close {
+  margin-top: 50px;
+  padding: 0;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.close:hover {
+  color: $nyxl-red;
+}
+
+//HEADER STYLES//
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__cntr {
+    border: $border-color solid 1px;
+    // min-width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 40px;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 500px;
+
+    &__name,
+    &__front,
+    &__web {
+      margin: 5px;
+    }
+
+    &__div {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__date {
+      @include headerbg;
+      top: -40px;
+      left: 30px;
+    }
+
+    &__local {
+      @include headertxt;
+      bottom: -30px;
+      right: 40px;
+    }
+  }
+}
+
+//ABOUT STYLES//
+.about::before {
+  background: url($about);
+  @include bg;
+}
+
+.about {
+  height: 130vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    border: $border-color solid 1px;
+    position: relative;
+
+    &__text {
+      padding: 0 20px 0 20px;
+      font-size: 20px;
+    }
+
+    &__user {
+      @include headerbg;
+      top: -45px;
+      left: 15px;
+    }
+
+    &__img {
+      height: 400px;
+      align-self: center;
+      opacity: 0.5;
+      background-color: $highlight-color;
+      padding: 0;
+    }
+  }
+
+  &__skills {
+    margin: 100px 0 100px 0;
+    text-align: center;
+    position: relative;
+    border: $border-color solid 1px;
+    padding: 20px 0 20px 0;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__item {
+      width: calc(100% / 5 - 10px);
+      margin: 0 5px 5px;
+      padding: 0;
+      position: relative;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      & i {
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+        color: $highlight-color;
+      }
+    }
+
+    &__text {
+      font-size: 20px;
+      margin: 10px;
+    }
+
+    &__txt {
+      @include headertxt;
+      top: -28px;
+      left: 30px;
+    }
+  }
+}
+
+//PORTFOLIO GALLERY STARTS///
+.work {
+  margin: 100px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__pillar {
+    width: 80%;
+
+    &--top {
+      transform: rotate(-180deg);
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__gallery {
+    margin: 30px 0 30px 0;
+    align-items: center;
+    height: 100%;
+    border: $border-color solid 1px;
+    padding: 50px 0 20px 0;
+    position: relative;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__item {
+      width: calc(100% / 1 - 40px);
+      margin: 0 20px 50px;
+      padding: 0;
+      position: relative;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__icon {
+      width: 20%;
+      margin-bottom: 15px;
+    }
+
+    &__link {
+      @include link;
+      font-size: 35px;
+      font-weight: 600;
+    }
+
+    &__link::after {
+      @include linkafter;
+    }
+
+    &__link:hover::after {
+      @include linkhover;
+    }
+
+    &__text {
+      text-transform: lowercase;
+      font-size: 18px;
+      color: $subheading-color;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: $font-color 1px solid;
+      filter: grayscale(100%);
+      margin: 0;
+      padding: 0;
+    }
+
+    &__img:hover {
+      filter: grayscale(0);
+    }
+
+    &__txt {
+      @include headerbg top: -40px;
+      left: 30px;
+    }
+  }
+}
+
+//CONTACT SECTION//
+.contact::before {
+  @include bg;
+  background: url($flamingos);
+}
+
+.contact {
+  position: relative;
+  height: 120vh;
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  &__mail {
+    width: 10%;
+    margin-top: 300px;
+  }
+
+  &__icons {
+    & a {
+      text-decoration: none;
+      color: $font-color;
+      font-size: 40px;
+    }
+
+    & a:hover {
+      color: $highlight-color;
+    }
+
+    & span a {
+      color: #000000;
+      font-size: 75px;
+    }
+
+    & span a:hover {
+      color: $nyxl-red;
+    }
+  }
+}
+
+//MEDIA QUERIES PARTIAL//
+@import "mediaqueries";

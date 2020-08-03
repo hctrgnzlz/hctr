@@ -1,0 +1,157 @@
+//MEDIA QUERIES STARTS//
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .about {
+    &__content {
+      &__text {
+        font-size: 18px;
+      }
+      &__img {
+        height: 450px;
+      }
+    }
+    &__skills {
+      &__text {
+        font-size: 15px;
+      }
+    }
+  }
+
+  #logo {
+    opacity: 1;
+    width: 150px;
+  }
+
+  .nav {
+    &__toggle {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+      user-select: none;
+      text-transform: lowercase;
+
+      & input {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+      }
+
+      & span,
+      & #toggle {
+        display: block;
+      }
+
+      & i {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        display: inline-block;
+        font-size: 3rem;
+      }
+
+      & input:checked ~ ul {
+        transform: none;
+        right: 0;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: -3%;
+      right: -150%;
+      width: 100%;
+      height: 110vh;
+      background-image: url($bgdark);
+      transition: all 0.5s ease-in;
+    }
+
+    &__item {
+      padding: 10px 0;
+      font-size: 22px;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    &__content {
+      &__text {
+        font-size: 15px;
+      }
+    }
+    &__skills {
+      &__item {
+        width: calc(100% / 3 - 20px);
+      }
+      &__text {
+        font-size: 13px;
+      }
+    }
+  }
+  .work {
+    &__gallery {
+      &__item {
+        width: calc(100% / 1 - 20px);
+      }
+      &__link {
+        font-size: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .about {
+      &__content {
+        margin-top: 60px;
+        padding: 20px;
+        &__text {
+          font-size: 15px;
+        }
+        &__img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* Landscape phones and down */
+  @media (max-width: 480px) {
+    .secret {
+      &__title::before {
+        width: 75%;
+      }
+    }
+    .secret.active {
+      height: 50vh;
+      min-width: 50vh;
+    }
+    .about {
+      height: 150vh;
+      &__skills {
+        margin-top: 40px;
+        &__item {
+          width: calc(100% / 2 - 10px);
+          margin: 0 3px 5px;
+        }
+      }
+    }
+
+    .about::before {
+      background-position: right;
+    }
+  }
+}

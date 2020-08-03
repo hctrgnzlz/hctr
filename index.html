@@ -3,8 +3,275 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hctr</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="favicon.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d15c03b01c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>The Portfolio of Hector Gonzalez</title>
   </head>
-  <body></body>
+
+  <body>
+    <!-- start of aside section -->
+    <section class="aside">
+      <aside class="aside__date">
+        43.6426° N, 79.3871° W
+      </aside>
+      <aside class="aside__name">
+        The Portfolio of Hector Gonzalez
+      </aside>
+    </section>
+
+    <!-- start of nav -->
+    <div class="nav">
+      <img class="nav__logo" src="./assets/logo.png" />
+      <nav>
+        <div class="nav__toggle">
+          <input type="checkbox" id="toggle"/>
+          <span aria-label="navigation bar"><i class="fas fa-bars"></i>
+          </span>
+          <ul id="nav__list" class="nav__list">
+            <li class="nav__item">
+              <span aria-label="logo"
+                ><img class="nav__logo" id="logo" src="./assets/logo.png"
+              /></span>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#work">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- start of header section -->
+    <section class="header">
+      <div class="wrapper">
+        <div class="header__cntr">
+        <h1 class="header__cntr__name">Hector Gonzalez</h1>
+        <div class="header__cntr__div">
+          <h1 class="header__cntr__front">Front-End</h1>
+        
+        <!-- start of quick facts   -->
+        <div class="secret">
+            <h1 class="secret__title">Hector Gonzalez</h1>
+            <p class="secret__text">Front-End Web Developer</p>
+            <p class="secret__text">Toronto, Ontario</p>
+            <p class="secret__text">hello(@)hctr.ca</p>     
+            <div class="secret__media">
+              <a href="https://www.linkedin.com/in/hctr/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+                <a href="https://www.github.com/hctrgnzlz/" target="_blank">
+                  <i class="fab fa-github-alt"></i>
+                </a>
+                <a href="https://www.twitter.com/hctrgnzlz" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              <br>
+              <a href="https://www.instagram.com/hctr/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.last.fm/user/1996" target="_blank">
+                <i class="fab fa-lastfm"></i>
+                <a href="https://letterboxd.com/hctr" target="_blank">
+                  <i class="fas fa-film"></i>
+                </a>
+              </div>  
+              <div class="close"><i class="far fa-window-close"></i>
+              </div>
+            </div>
+          <img class="eye" src="./assets/eye.png" />
+        </div>
+        <h1 class="header__cntr__web">Web Developer</h1>
+        <h2 class="header__cntr__date">2020</h2>
+        <h2 class="header__cntr__local">TOR</h3>
+      </div>
+    </div>
+    </section>
+
+    <!-- start of about section -->
+    <section class="about" id="about">
+      <div class="wrapper">
+      <div class="about__content">
+        <img class="about__content__img" src="./assets/glitch.gif">
+          <p class="about__content__text">
+           My name is Hector Gonzalez. I am a front-end web developer with a passion for digital interaction and communication. My goal is to solve problems for clients through exciting & creative ideas that render into thoughtful code & design.
+          <br>
+          <br>
+           In my past life I've accumulated over 10 years of experience in customer service and 4 years as a human resources professional. I'm currently freelancing and chasing my dream within web development. 
+          <br>
+          <br>
+           I reside in Toronto, Ontario. When I am not working, I am usually hanging out with my partner & dog, playing video games, or discovering new music.
+            <br>
+            <br>
+           Thank you for stopping by. Drop me a line if you want to connect!
+          </p>
+          <h2 class="about__content__user">hctr_gnzlz</h2>
+      </div>
+
+      <div class="about__skills">
+        <ul class="about__skills__list">
+          <li class="about__skills__item">
+            <i class="fab fa-html5"></i>
+            <p class="about__skills__text">
+              HTML5
+            </p>
+          </li>   
+          <li class="about__skills__item">
+            <i class="fab fa-css3-alt"></i>
+            <p class="about__skills__text">
+              CSS3
+            </p>
+          </li>  
+          <li class="about__skills__item">
+            <i class="fab fa-sass"></i>
+            <p class="about__skills__text">
+              SASS
+            </p>
+          </li>  
+          <li class="about__skills__item">
+            <i class="fab fa-js-square"></i>
+            <p class="about__skills__text">
+              JavaScript
+            </p>
+          </li>   
+          <li class="about__skills__item">
+            <i class="fas fa-dollar-sign"></i>
+            <p class="about__skills__text">
+              JQUERY
+            </p>
+          </li>
+          <li class="about__skills__item">
+            <i class="fab fa-react"></i>
+            <p class="about__skills__text">
+              React
+            </p>
+          </li>    
+          <li class="about__skills__item">
+            <i class="fas fa-code"></i>
+            <p class="about__skills__text">
+              Visual Studio Code
+            </p>
+          </li>    
+          <li class="about__skills__item">
+            <i class="fas fa-users"></i>
+            <p class="about__skills__text">
+              Pair/Mob Programming
+            </p>
+          </li>    
+          <li class="about__skills__item">
+            <i class="fas fa-universal-access"></i>
+            <p class="about__skills__text">
+              Web Accessibility
+            </p>
+          </li>    
+          <li class="about__skills__item">
+            <i class="fas fa-mobile-alt"></i>
+            <p class="about__skills__text">
+              Responsive Design
+            </p>
+          </li>
+        </ul>
+        <h2 class="about__skills__txt">skills</h2>
+      </div>
+      </div>
+    </section>
+
+    <!-- start of work section  -->
+  <section class="work" id="work">
+    <div class="wrapper">
+      <div class="work__gallery">
+        <div class="wrapper">
+          <ul class="work__gallery__list">
+            <img class="work__pillar--top" src="assets/pillar.gif">
+            <li class="work__gallery__item">
+              <img class="work__gallery__icon" src="assets/windows95/project.png">
+              <a class="work__gallery__link" href="https://hctrgnzlz.github.io/hector-gonzalez-project-three/" target="_blank">
+              Wu-Tang Name Generator
+              </a>
+              <p class="work__gallery__text">
+                HTML / CSS / SCSS / JavaScript / jQuery
+              </p>     
+            </li>
+            <li class="work__gallery__item">
+              <img class="work__gallery__icon" src="assets/windows95/project.png">
+              <a class="work__gallery__link" href="https://hctrgnzlz.github.io/hector-gonzalez-project-fifive/" target="_blank">
+              Lucid: Dream Journal
+              </a>
+              <p class="work__gallery__text">
+              HTML / CSS / ReactJS / Firebase / API
+              </p>
+            </li>
+            <li class="work__gallery__item">
+              <img class="work__gallery__icon" src="assets/windows95/pair.png">
+              <a class="work__gallery__link" href="https://anny-hector.github.io/emoji-image-gallery" target="_blank">
+              Emoji Image Gallery
+              </a>
+              <p class="work__gallery__text">
+                HTML / CSS / SCSS / JavaScript / jQuery / API / Pair Programming
+              </p>
+            </li>
+            <li class="work__gallery__item">
+              <img class="work__gallery__icon" src="assets/windows95/mob.png">
+              <a class="work__gallery__link" href="https://whats-for-dinner-juno.github.io/teamFoodie" target="_blank">
+                What's for Dinner?
+              </a>
+              <p class="work__gallery__text">
+                HTML / CSS / SCSS / ReactJS / API / Firebase / Mob Programming
+              </p>
+            </li>
+            <img class="work__pillar" src="assets/pillar.gif">
+          </ul>
+          <h1 class="work__gallery__txt">Work</h1>
+        </div>
+      </div>
+      </div>
+  </section>
+
+    <!-- start of contact sections -->
+   <section class="contact" id="contact">
+          <div class="contact__content">
+            <img class="contact__mail" src="assets/windows95/mail.png">
+            <div id="glitch">
+              <a href="mailto:hello@hctr.ca">
+                <h1 class="glitch" data-text="hello(@)hctr.ca">hello(@)hctr.ca</h1>
+              </a>
+            </div>   
+              <span class="sub">© hector gonzalez 2020</span>
+              <div class="contact__icons">
+                <a href="https://www.linkedin.com/in/hctr/" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.github.com/hctrgnzlz/" target="_blank">
+                  <i class="fab fa-github-square"></i>
+                </a>
+                <a href="https://www.twitter.com/hctrgnzlz" target="_blank">
+                  <i class="fab fa-twitter-square"></i>
+                </a>
+              </div>       
+          </div>
+        </section>
+        <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous">
+  </script>
+  <script src="script.js"></script>
+  
+  </body>
 </html>
