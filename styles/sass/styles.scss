@@ -238,7 +238,7 @@ a {
 }
 
 .about {
-  height: 130vh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -428,11 +428,6 @@ a {
     align-items: center;
     justify-content: space-between;
     text-align: center;
-  }
-
-  &__mail {
-    width: 10%;
-    margin-top: 300px;
   }
 
   &__icons {
