@@ -20,6 +20,11 @@ $nyxl-red: #d42331;
 $nyxl-blue: #141b3b;
 
 //MIXINS//
+
+@mixin border {
+  border: $border-color solid 1px;
+}
+
 @mixin link {
   color: $font-color;
   text-decoration: none;
@@ -39,6 +44,19 @@ $nyxl-blue: #141b3b;
 @mixin linkhover {
   background: rgba(249, 0, 0, 0.3);
   transition: all 0.5s ease-out;
+}
+
+@mixin hover {
+  a {
+    @include link;
+  }
+  a::after {
+    @include linkafter;
+  }
+
+  a:hover::after {
+    @include linkhover;
+  }
 }
 
 @mixin headerbg {

@@ -8,10 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/d15c03b01c.js"
-      crossorigin="anonymous"
-    ></script>
+    
     <link rel="stylesheet" href="styles/styles.css" />
     <title>The Portfolio of Hector Gonzalez</title>
   </head>
@@ -30,7 +27,6 @@
     <!-- start of nav -->
     <div class="nav">
       <img class="nav__logo" src="./assets/logo.png" />
-      <nav>
         <div class="nav__toggle">
           <input type="checkbox" id="toggle"/>
           <span aria-label="navigation bar"><i class="fas fa-bars"></i>
@@ -55,16 +51,15 @@
             </li>
           </ul>
         </div>
-      </nav>
     </div>
 
     <!-- start of header section -->
     <section class="header">
       <div class="wrapper">
-        <div class="header__cntr">
-        <h1 class="header__cntr__name">Hector Gonzalez</h1>
-        <div class="header__cntr__div">
-          <h1 class="header__cntr__front">Front-End</h1>
+        <div class="header__container">
+        <h1 class="header__container__name">Hector Gonzalez</h1>
+        <div class="header__container__div">
+          <h1 class="header__container__front">Front-End</h1>
         
         <!-- start of quick facts   -->
         <div class="secret">
@@ -97,9 +92,9 @@
             </div>
           <img class="eye" src="./assets/eye.png" />
         </div>
-        <h1 class="header__cntr__web">Web Developer</h1>
-        <h2 class="header__cntr__date">2020</h2>
-        <h2 class="header__cntr__local">TOR</h3>
+        <h1 class="header__container__web">Web Developer</h1>
+        <h2 class="header__container__date">2020</h2>
+        <h2 class="header__container__local">TOR</h3>
       </div>
     </div>
     </section>
@@ -107,22 +102,27 @@
     <!-- start of about section -->
     <section class="about" id="about">
       <div class="wrapper">
-      <div class="about__content">
-        <img class="about__content__img" src="./assets/glitch.gif">
-          <p class="about__content__text">
-           My name is Hector Gonzalez. I am a front-end web developer with a passion for digital interaction and communication. My goal is to solve problems for clients through exciting & creative ideas that render into thoughtful code & design.
-          <br>
-          <br>
-           In my past life I've accumulated over 10 years of experience in customer service and 4 years as a human resources professional. I'm currently freelancing and chasing my dream within web development. 
-          <br>
-          <br>
-           I reside in Toronto, Ontario. When I am not working, I am usually hanging out with my partner & dog, playing video games, or discovering new music.
-            <br>
-            <br>
-           Thank you for stopping by. Drop me a line if you want to connect!
-          </p>
-          <h2 class="about__content__user">hctr_gnzlz</h2>
-      </div>
+
+  <div class="about__container">
+    <img src="./assets/glitch.gif" class="about__container__img" />
+  
+    <div class="about__container__content">
+        <p>
+          My name is Hector Gonzalez. I am a front-end web developer with a passion for digital interaction and communication. My goal is to solve problems for clients through exciting & creative ideas that render into thoughtful code & design.
+        </p>
+        <p>
+          In my past life I've accumulated over 10 years of experience in customer service and 4 years as a human resources professional. I'm currently freelancing and chasing my dream within web development.
+        </p>
+        <p>
+          I reside in Toronto, Ontario. When I am not working, I am usually hanging out with my partner & dog, playing video games (Overwatch & Street Fighter V), or discovering new music.
+        </p>
+        <p>
+        Thank you for stopping by. Drop me a <a href="mailto:hello@hctr.ca">line </a> if you want to connect!
+        </p>
+    </div>
+    <h2 class="about__container__name">hctr_gnzlz</h2>
+
+  </div>
 
       <div class="about__skills">
         <ul class="about__skills__list">
@@ -251,6 +251,8 @@
                 <h1 class="glitch" data-text="hello(@)hctr.ca">hello(@)hctr.ca</h1>
               </a>
             </div>   
+            
+            <img class="contact__content__logo" src="./assets/logo.png" alt="">
               <span class="sub">© hector gonzalez 2020</span>
               <div class="contact__icons">
                 <a href="https://www.linkedin.com/in/hctr/" target="_blank">
@@ -264,12 +266,19 @@
                 </a>
               </div>       
           </div>
-        </section>
-        <script
+    </section>
+
+
+
+
+
+
+  <script
     src="https://code.jquery.com/jquery-3.4.0.min.js"
     integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
     crossorigin="anonymous">
   </script>
+  <script src="https://kit.fontawesome.com/d15c03b01c.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
   
   </body>
