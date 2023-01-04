@@ -1,84 +1,23 @@
 //VARIABLES & MIXINS//
 
 //FONTS//
-$font: "Unica One", sans-serif;
+$font: 'Source Sans Pro', sans-serif;
 
-//BACKGROUNDS//
-$bg: "../assets/backgrounds/bg.jpg";
-$bgdark: "../assets/backgrounds/bgdark.jpg";
-$contact: "../assets/backgrounds/contact.gif";
-$about: "../assets/backgrounds/about.png";
-$flamingos: "../assets/backgrounds/flamingos.jpg";
+//WEARY TRAVELER//
+$gif: "../assets/backgrounds/darksouls.gif";
 
 //COLORS//
-$font-color: #333333;
+$font-color: #fbf1c7;
 $subheading-color: #999999;
-$bg-color: #e7e7e7;
-$border-color: #dadada;
-$highlight-color: #f93959;
-$nyxl-red: #d42331;
-$nyxl-blue: #141b3b;
+$bg-color: #282828;
 
 //MIXINS//
-
-@mixin border {
-  border: $border-color solid 1px;
-}
-
-@mixin link {
-  color: $font-color;
-  text-decoration: none;
-  position: relative;
-}
-
-@mixin linkafter {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 10%;
-  width: 90%;
-  height: 55%;
-  z-index: -1;
-}
-
-@mixin linkhover {
-  background: rgba(249, 0, 0, 0.3);
-  transition: all 0.5s ease-out;
-}
-
-@mixin hover {
-  a {
-    @include link;
-  }
-  a::after {
-    @include linkafter;
-  }
-
-  a:hover::after {
-    @include linkhover;
-  }
-}
-
-@mixin headerbg {
-  background-color: $highlight-color;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px;
-  position: absolute;
-}
-
-@mixin headertxt {
-  color: $highlight-color;
-  position: absolute;
-  font-size: 20px;
-}
-
 @mixin bg {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-size: cover;
   opacity: 0.3;
   z-index: -1;
